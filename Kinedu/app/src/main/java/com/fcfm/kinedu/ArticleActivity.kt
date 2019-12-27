@@ -7,8 +7,11 @@ import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.text.htmlEncode
 import com.fcfm.kinedu.Models.articles
+import com.fcfm.kinedu.Utils.hideLoadingBar
+import com.fcfm.kinedu.Utils.showLoadingBar
 import com.google.gson.GsonBuilder
 import com.squareup.picasso.Picasso
 import okhttp3.*
@@ -20,6 +23,7 @@ class ArticleActivity : AppCompatActivity() {
     //private var mActivityPurpose: TextView? = null
     private var mActivityImage: ImageView? = null
     private var mActivityWebView: WebView? = null
+    private var baseLayout: ConstraintLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +33,10 @@ class ArticleActivity : AppCompatActivity() {
         //mActivityPurpose = findViewById(R.id.tvBodyDetailArticle)
         mActivityImage = findViewById(R.id.ivImageDeatilArticle)
         mActivityWebView = findViewById(R.id.wvBodyArticle)
+
+        baseLayout = findViewById(R.id.clArticleDetail) as ConstraintLayout
+
+        val loadingBar = showLoadingBar(this, baseLayout!!)
 
         var id = intent.getIntExtra("id", 0)
 
@@ -68,7 +76,9 @@ class ArticleActivity : AppCompatActivity() {
                         .fit()
                         .centerCrop()
                         .into(mActivityImage)
+                    hideLoadingBar(loadingBar)
                 }
+
 
             }
         })

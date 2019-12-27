@@ -13,8 +13,8 @@ import java.io.*
 
 
 fun showLoadingBar(context:Context, roofLayoutRef:ConstraintLayout):ProgressBar{
-    val progressBar = ProgressBar(context, null, android.R.attr.progressBarStyleLarge)
-    val params = RelativeLayout.LayoutParams(200, 200)
+    val progressBar = ProgressBar(context,null, android.R.attr.progressBarStyleLarge)
+    val params = RelativeLayout.LayoutParams(700, 700)
     params.addRule(RelativeLayout.CENTER_IN_PARENT)
     roofLayoutRef.addView(progressBar, params)
 

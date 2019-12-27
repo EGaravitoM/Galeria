@@ -1,6 +1,7 @@
 # Galeria
 
 Se utilizaron las siguientes liberías externas para correr la aplicación:
+	
 	//3rd Party Libraries
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.picasso:picasso:2.71828'

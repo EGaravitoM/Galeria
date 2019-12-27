@@ -86,9 +86,9 @@ class ActivityFragment(myFeed:Boolean) : Fragment(){
                 val data = gson.fromJson(body, Reciever::class.java)
 
                 getActivity()?.runOnUiThread {
-                    var dividerItemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
+                    /*var dividerItemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
                     dividerItemDecoration.setDrawable(resources.getDrawable(R.drawable.recyclerview_divider))
-                    recycleAcrivities.addItemDecoration(dividerItemDecoration)
+                    recycleAcrivities.addItemDecoration(dividerItemDecoration)*/
                     recycleAcrivities.apply {
                         layoutManager = LinearLayoutManager(activity)
                         adapter =  ActivityAdapter(

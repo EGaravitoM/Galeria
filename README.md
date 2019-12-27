@@ -8,7 +8,7 @@ Se utilizaron las siguientes liberías externas para correr la aplicación:
     implementation 'com.squareup.okhttp3:okhttp:4.2.1'
 	
 Para incluirlas en caso de ser necesario, solo hace falta ir al apartado de 'Gradle Scripts',
-dentro de este se encontrará 'build.gradle (mModule: app)' y se copiara y pegará lo anterior 
+dentro de este se encontrará 'build.gradle(Module: app)' y se copiara y pegará lo anterior 
 mente puesto antes de la última llave.
 
  

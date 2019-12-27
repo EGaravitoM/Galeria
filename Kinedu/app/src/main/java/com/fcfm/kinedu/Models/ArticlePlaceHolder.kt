@@ -27,6 +27,8 @@ class ArticlePlaceHolder(inflater: LayoutInflater, parent: ViewGroup):
         mActivityPurpose?.text = art.short_description
         Picasso.get()
             .load(art.picture)
+            .fit()
+            .centerCrop()
             .into(mActivityImage)
     }
 

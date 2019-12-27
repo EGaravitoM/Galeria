@@ -61,6 +61,8 @@ class ArticleActivity : AppCompatActivity() {
                     //mActivityPurpose?.text = data2?.data?.article?.body
                     Picasso.get()
                         .load(data2?.data?.article?.picture)
+                        .fit()
+                        .centerCrop()
                         .into(mActivityImage)
                 }
 

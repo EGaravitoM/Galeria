@@ -27,6 +27,9 @@ class ActivityPlaceHolder(inflater: LayoutInflater, parent: ViewGroup):
         mActivityPurpose?.text = act.purpose
         Picasso.get()
             .load(act.thumbnail)
+            //.resizeDimen(R.dimen.image_size300dp,R.dimen.image_size300dp)
+            .fit()
+            .centerCrop()
             .into(mActivityImage)
     }
 

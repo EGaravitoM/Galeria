@@ -26,14 +26,23 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spAgeGroup"
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
-            android:scrollbarThumbHorizontal="@color/colorWhiteText"
-            android:scrollbarThumbVertical="@color/colorWhiteText" />
+            android:background="@color/colorWhiteText">
+
+            <Spinner
+                android:id="@+id/spAgeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:scrollbarThumbHorizontal="@color/colorWhiteText"
+                android:scrollbarThumbVertical="@color/colorWhiteText" />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

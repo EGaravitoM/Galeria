@@ -3,6 +3,7 @@ package com.fcfm.kinedu
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
+import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,16 +17,18 @@ import java.io.IOException
 class ArticleActivity : AppCompatActivity() {
 
     private var mActivityTitle: TextView? = null
-    private var mActivityPurpose: TextView? = null
+    //private var mActivityPurpose: TextView? = null
     private var mActivityImage: ImageView? = null
+    private var mActivityWebView: WebView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_articledetail)
 
         mActivityTitle = findViewById(R.id.tvTitleDetailArticle)
-        mActivityPurpose = findViewById(R.id.tvBodyDetailArticle)
+        //mActivityPurpose = findViewById(R.id.tvBodyDetailArticle)
         mActivityImage = findViewById(R.id.ivImageDeatilArticle)
+        mActivityWebView = findViewById(R.id.wvBodyArticle)
 
         var id = intent.getIntExtra("id", 0)
 
@@ -53,11 +56,12 @@ class ArticleActivity : AppCompatActivity() {
 
                 runOnUiThread {
                     mActivityTitle?.text = data2?.data?.article?.title
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    mActivityWebView?.loadDataWithBaseURL(null, data2?.data?.article?.body,"text/html", "utf-8", null)
+                    /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                         mActivityPurpose?.setText(Html.fromHtml(data2?.data?.article?.body, Html.FROM_HTML_MODE_COMPACT))
                     } else {
                         mActivityPurpose?.setText(Html.fromHtml(data2?.data?.article?.body))
-                    }
+                    }*/
                     //mActivityPurpose?.text = data2?.data?.article?.body
                     Picasso.get()
                         .load(data2?.data?.article?.picture)

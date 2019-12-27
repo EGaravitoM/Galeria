@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Kinedu</string>
     <string name="welcomeMsg">Welcome Back</string>
+    <string name="article_title">Article Title</string>
+    <string name="article_description">Article Description</string>
     <string-array name="ageGroup">
         <item>ALL MONTHS</item>
         <item>0-1 MONTH</item>

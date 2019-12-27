@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Kinedu</string>
+    <string name="welcomeMsg">Welcome Back</string>
+    <string-array name="ageGroup">
+        <item>ALL MONTHS</item>
+        <item>0-1 MONTH</item>
+        <item>2 MONTHS</item>
+        <item>3 MONTHS</item>
+        <item>4 MONTHS</item>
+        <item>5 MONTHS</item>
+        <item>6 MONTHS</item>
+        <item>7 MONTHS</item>
+        <item>8 MONTHS</item>
+        <item>9 MONTHS</item>
+        <item>10 MONTHS</item>
+        <item>11 MONTHS</item>
+        <item>12 MONTHS</item>
+        <item>13 MONTHS</item>
+        <item>14 MONTHS</item>
+        <item>15 MONTHS</item>
+        <item>16 MONTHS</item>
+    </string-array>
+</resources>

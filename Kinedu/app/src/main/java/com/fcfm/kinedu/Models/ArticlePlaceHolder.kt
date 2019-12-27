@@ -6,7 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fcfm.kinedu.R
+import com.fcfm.kinedu.Utils.CircleTransform
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
 
 class ArticlePlaceHolder(inflater: LayoutInflater, parent: ViewGroup):
     RecyclerView.ViewHolder(inflater.inflate(R.layout.articlesdesign, parent, false)) {
